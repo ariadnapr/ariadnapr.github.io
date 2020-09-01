@@ -1,10 +1,30 @@
 body {
   font-family: sans-serif;
-  padding-left: 20px;
+  padding: 20px;
 }
 
-h1 {
-  color: #95C674;
+.header1 {
+  margin: 0;
+  padding: 0;
+  color: #5d8a3f;
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.header2 {
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 24px;
+  margin-bottom: 9px;
+}
+
+.header3 {
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 21px;
+  margin-bottom: 40px;
 }
 
 .column {
@@ -14,7 +34,19 @@ h1 {
 
 .link {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
   font-weight: 600;
-  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.link:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.back-link {
+  margin-bottom: 40px;
+}
+
+.link-index {
+  margin-bottom: 10px;
 }

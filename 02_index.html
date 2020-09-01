@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head id="insert-head">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <div id="insert-header"></div>
+  <h2 class="header2">Selecció de materials</h2>
+  <h3 class="header3">Ariadna Plans Raubert</h3>
+
+  <div id="insert-index" class="column">
+  </div>
+
+  <script>
+    const titles = [
+      "Presentació de la programació i UD2",
+      "General_Activitats_Avaluació_UD2",
+      "S01_Presentació objectius_CA_IA",
+      "S01_Coneixements previs",
+      "S01_Activitat motivació",
+      "S02_Preguntes abans del procés",
+      "S02_Pla_Treball_A3",
+      "S02_Kanban board_A3",
+      "S03_Què és un pressupost_Activitats",
+      "S03_Sac de dubtes",
+      "S04_Renda disponible_Activitats",
+      "S05_Destí renda disponible_Activitats",
+      "S06_Repàs full càlcul_Activitats",
+      "S07_Fem el pressupost_Full càlcul",
+      "S08_Productes consum_alternatives_Activitats",
+      "S08_Bastida suport_consum responsable",
+      "S09_Consum responsable_alternatives_Activitats",
+      "S09_Font 1_Consum conscient",
+      "S09_Font 2_Presa decisions",
+      "S09_Font 3_Principis consum responsable",
+      "S10_Comerç just_Experts",
+      "S10_Píndola formativa_comerç just",
+      "S10_Comerç just_Còmic",
+      "S12_Bretxa salarial_Dinàmica",
+      "S12_Font consulta extra_Dossier 8M_2019",
+      "S12_Font consulta extra_Llei 17/2015",
+      "S13_Estalvi i entitats bancàries",
+      "S14_Finançament_Activitats",
+      "S14_Píndola formativa_Finançament_Entitats Bancàries",
+      "S14_Píndola formativa_Alternatives finançament",
+      "S14_Bastida de suport_Notes",
+      "S15_Bastida de suport_Mapa mut",
+      "S16_Rúbrica presentació",
+      "S17_Metacognició",
+      "S17_Rúbrica producte_UD2",
+    ]
+    const files = [
+      "02_00.html", "02_01.html", "02_02.html", "02_03.html", "02_04.html", "02_05.html", "02_06.html", "02_07.html", "02_08.html", "02_09.html", "02_10.html", "02_11.html", "02_12.html", "02_13.html", "02_14.html", "02_15.html", "02_16.html", "02_17.html", "02_18.html", "02_19.html", "02_20.html", "02_21.html", "02_22.html", "02_23.html", "02_24.html", "02_25.html", "02_26.html", "02_27.html", "02_28.html", "02_29.html", "02_30.html", "02_31.html", "02_32.html", "02_33.html", "02_34.html"];
+
+    let path = window.location.pathname;
+    let file = path.split("/").pop();
+    let unit = parseInt(file.split("_").shift());
+
+    document.getElementById("insert-head").innerHTML += `    <title>Programació d’Economia i Emprenedoria - Unitat Didàctica ${unit}</title>`
+
+    document.getElementById("insert-header").innerHTML += `
+    <h1 class="header1" > Programació d’Economia i Emprenedoria, i UD${unit}</h1 >`
+
+    for (let i = 0; i < titles.length; i++) {
+      document.getElementById("insert-index").innerHTML +=
+        `<a href="${files[i]}" class="link link-index">> ${titles[i]}</a>`
+    }
+  </script>
+</body>
+
+</html>
