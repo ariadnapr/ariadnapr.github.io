@@ -28,8 +28,17 @@
       document.getElementById("body").innerHTML = bodyContent;
     };
 
+    // function redirect(index) {
+    //   sessionStorage.setItem("index", index);
+    //   location.assign(`${unit}_pdf.html`);
+    // };
+
     function redirect(index) {
-      sessionStorage.setItem("index", index);
+      let indexArray = (!!sessionStorage.getItem("indexArray")) ? JSON.parse(sessionStorage.getItem("indexArray")) : [];
+      indexArray.push(index);
+      sessionStorage.setItem(
+        "indexArray", JSON.stringify(indexArray));
+
       location.assign(`${unit}_pdf.html`);
     };
 

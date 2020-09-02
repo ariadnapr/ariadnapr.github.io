@@ -7,7 +7,11 @@
   <link rel="stylesheet" type="text/css" href="./styles.css">
   <script src="02_data.js"></script>
   <script>
-    var index = sessionStorage.getItem("index") || 0;
+    var indexArray = (!!sessionStorage.getItem("indexArray")) ? JSON.parse(sessionStorage.getItem("indexArray")) : [];
+    var index = (indexArray.length > 0) ? indexArray.pop() : 0;
+    sessionStorage.setItem(
+      "indexArray", JSON.stringify(indexArray));
+
     var path = window.location.pathname;
     var file = path.split("/").pop();
     var unit = file.split("_").shift();
@@ -24,6 +28,10 @@
     };
 
     function goBack() {
+      indexArray.push(index);
+      sessionStorage.setItem(
+        "indexArray", JSON.stringify(indexArray));
+        
       location.assign(`${unit}_index.html`);
     };
   </script>
