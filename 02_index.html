@@ -7,18 +7,56 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script src="02_data.js"></script>
   <script>
-    var state = -1;
     var path = window.location.pathname;
     var file = path.split("/").pop();
     var unit = file.split("_").shift();
+
+    function loadContent() {
+      document.getElementById("title").innerHTML = `
+          Economia i Emprenedoria. Programació i UD${unit}`;
+
+      var bodyContent = `
+      <h1 class="header1"> Economia i Emprenedoria. Programació i UD${unit}</h1>
+      <h2 class="header2">Proposta de materials</h2>
+      <h3 class="header3">Ariadna Plans Raubert</h3>`
+
+      for (let i = 0; i < titles.length; i++) {
+        bodyContent += `<button class="btn btn-index" onclick="redirect(${i})">> ${titles[i]}</button>`
+      };
+      bodyContent += "<p class='footer'>Nota: Per elaborar aquesta unitat s’han utilitzat propostes de treball i materials del llibret d’Educació financera a l’ESO editat pel Ministerio de Educación, del mòdul formatiu 2, 4 i 5 d’Economia Social i Finances Ètiques d’ Economia Social Catalunya, i del llibre de text: Bernardos, G., Alujas A., Juanmartí A., Manchón M., Roig M., Romero M., Solà J.,  Economia i emprenedoria 4t ESO. Barcelona. Editorial Barcanova.</p>"
+
+      document.getElementById("body").innerHTML = bodyContent;
+    };
+
+    function redirect(index) {
+      sessionStorage.setItem("index", index);
+      location.assign(`${unit}_pdf.html`);
+    };
   </script>
-  <script>
+
+
+
+
+  <!-- <script>
+
+    var path = window.location.pathname;
+    var file = path.split("/").pop();
+    var unit = file.split("_").shift();
+
+    var favoritemovie = "Shrek";
+    sessionStorage.setItem("favoriteMovie", favoritemovie);
+
+  </script> -->
+  <!-- <script>
     function loadHtml(newState) {
       state = newState;
       let htmlContent;
       if (state == -1) {
         document.getElementById("title").innerHTML = `
           Economia i Emprenedoria. Programació i UD${unit}`;
+          
+          htmlContent =  `<a href="02_00.html" class="link link-index">> Go go</a>`
+          
         htmlContent = `
           <h1 class="header1"> Economia i Emprenedoria. Programació i UD${unit}</h1>
           <h2 class="header2">Proposta de materials</h2>
@@ -36,10 +74,12 @@
           <iframe src="pdf/${unit}/${files[state]}" style="width:1200px; height:800px; border:none;"></iframe>`
       }
       document.getElementById("body").innerHTML = htmlContent;
-    };
+    }; -->
   </script>
 </head>
 
-<body onload="loadHtml(state)" id="body" class="column"></body>
+<body onload="loadContent()" id="body" class="column">
+
+</body>
 
 </html>

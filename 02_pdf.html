@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Presentació de la programació i UD2</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+<body>
+  <div id="insert-content" class="column">
+    <a href="02_index.html" class="link back-link">&lt; back to index</a>
+  </div>
+  <script>
+    var index = sessionStorage.getItem("index");
+  
+    document.getElementById("insert-content").innerHTML += `
+  <p>index: ${index}</p>`;
+
+
+  </script>
+
+</body>
+
+</html>
