@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   color: #5d8a3f;
-  font-size: 27px;
+  font-size: 30px;
   margin-bottom: 12px;
 }
 
@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   color: rgba(0, 0, 0, 0.8);
-  font-size: 24px;
+  font-size: 27px;
   margin-bottom: 9px;
 }
 
@@ -23,30 +23,48 @@ body {
   margin: 0;
   padding: 0;
   color: rgba(0, 0, 0, 0.4);
-  font-size: 21px;
+  font-size: 24px;
   margin-bottom: 40px;
 }
 
 .column {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
-.link {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.6);
+.btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 21px;
+  text-align: left;
+  cursor: pointer;
 }
 
-.link:hover {
+.btn-index {
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
+}
+
+.btn-index:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.back-link {
+.btn-back {
+  font-size: 24px;
+  color: rgba(255, 90, 0, 0.8);
   margin-bottom: 40px;
 }
 
-.link-index {
-  margin-bottom: 10px;
+.btn-back:hover {
+  color: rgb(255, 90, 0);
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
 }
