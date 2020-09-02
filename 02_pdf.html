@@ -3,23 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Presentació de la programació i UD2</title>
+  <title id="title"></title>
   <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script src="02_data.js"></script>
+  <script>
+    var index = sessionStorage.getItem("index") || 0;
+    var path = window.location.pathname;
+    var file = path.split("/").pop();
+    var unit = file.split("_").shift();
+
+    function loadContent() {
+      document.getElementById("title").innerHTML = `${titles[index]}`;
+
+      var bodyContent = `
+        <h1 class="header1">${titles[index]}</h1>
+        <button class="btn btn-back" onclick="goBack()">&lt; tornar a l'índex</button>
+        <iframe src="pdf/${unit}/${files[index]}" style="width:1200px; height:800px; border:none;"></iframe>`
+
+      document.getElementById("body").innerHTML = bodyContent;
+    };
+
+    function goBack() {
+      location.assign(`${unit}_index.html`);
+    };
+  </script>
 </head>
 
-<body>
-  <div id="insert-content" class="column">
-    <a href="02_index.html" class="link back-link">&lt; back to index</a>
-  </div>
-  <script>
-    var index = sessionStorage.getItem("index");
-  
-    document.getElementById("insert-content").innerHTML += `
-  <p>index: ${index}</p>`;
-
-
-  </script>
-
-</body>
+<body onload="loadContent()" id="body" class="column"></body>
 
 </html>
