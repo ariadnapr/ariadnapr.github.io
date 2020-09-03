@@ -63,7 +63,7 @@ const titles = [
     "S03_Font consulta còmic_Empresa",
     "S03_Font consulta còmic_Enterprise",
     "S03_Sac de dubtes",
-    "S04_ Píndola formativa_ADN Empresa",
+    "S04_Píndola formativa_ADN Empresa",
     "S04_RSC_Activitats_Taula i qüestions",
     "S04_Font lectura_Nespresso_Greenwashing",
     "S04_Font lectura_Socialwashing_Greenwashing",
