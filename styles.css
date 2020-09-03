@@ -33,9 +33,10 @@ body {
   align-items: flex-start;
 }
 
-.btn {
+.link {
   margin: 0;
   padding: 0;
+  text-decoration: none;
   border: none;
   background: none;
   font-weight: 600;
@@ -44,22 +45,22 @@ body {
   cursor: pointer;
 }
 
-.btn-index {
+.link-index {
   color: rgba(0, 0, 0, 0.6);
   margin-bottom: 10px;
 }
 
-.btn-index:hover {
+.link-index:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.btn-back {
+.link-back {
   font-size: 24px;
   color: rgba(255, 90, 0, 0.8);
   margin-bottom: 40px;
 }
 
-.btn-back:hover {
+.link-back:hover {
   color: rgb(255, 90, 0);
 }
 

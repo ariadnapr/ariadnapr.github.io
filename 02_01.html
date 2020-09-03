@@ -6,9 +6,11 @@
 <script>
   let path = window.location.pathname;
   let file = path.split("/").pop();
-  let unit = file.split("_").shift();
-  
-  loadIndex(unit, titles);
+  let name = file.split(".").shift();
+  let unit = name.split("_").shift();
+  let index = name.split("_").pop();
+
+  loadPdf(unit, index, titles);
 </script>
 
 </html>
