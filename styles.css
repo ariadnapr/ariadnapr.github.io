@@ -43,6 +43,7 @@ body {
   font-size: 21px;
   text-align: left;
   cursor: pointer;
+  flex: 0 0 auto;
 }
 
 .link-index {
