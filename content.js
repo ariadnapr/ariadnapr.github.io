@@ -1,4 +1,4 @@
-function loadIndex(unit, titles) {
+function loadIndex(unit, titles, footers) {
   let content = `
   <head>
     <meta charset="utf-8">
@@ -14,10 +14,7 @@ function loadIndex(unit, titles) {
     content += `<a href="${unit}_${leadingZeros(i, 2)}.html" class="link link-index">> ${titles[parseInt(unit)][i]}</a>`
   };
 
-  content += `
-    <p class='footer'>Nota: Per elaborar aquesta unitat s’han utilitzat propostes de treball i materials del llibret d’Educació financera a l’ESO editat pel Ministerio de Educación, del mòdul formatiu 2, 4 i 5 d’Economia Social i Finances Ètiques d’ Economia Social Catalunya, i del llibre de text: Bernardos, G., Alujas A., Juanmartí A., Manchón M., Roig M., Romero M., Solà J., Economia i emprenedoria 4t ESO. Barcelona. Editorial Barcanova.</p>
-  </body>`;
-
+  content += `${footers[parseInt(unit)]}</body>`;
   document.documentElement.innerHTML = content;
 }
 

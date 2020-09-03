@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<script src="content.js"></script>
+<script src="data.js"></script>
+
+<script>
+  let path = window.location.pathname;
+  let file = path.split("/").pop();
+  let name = file.split(".").shift();
+  let unit = name.split("_").shift();
+  let index = name.split("_").pop();
+
+  loadPdf(unit, index, titles);
+</script>
+
+</html>
