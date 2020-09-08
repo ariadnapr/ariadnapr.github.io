@@ -122,7 +122,7 @@ const titles = [
     "S11 Valors EB",
     "S12 Gènere i SP. Activitats",
     "S12 Font. Lideratge femení i valors",
-    "S12 Font. Mapa women in polítics",
+    "S12 Font. Mapa women in politics",
     "S12 Font extra. Dossier 8M 2019",
     "S12 Font extra. Llei 17/2015",
     "S14 Revisió plans equip",
