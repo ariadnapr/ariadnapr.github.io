@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="./styles.css">
 <script src="content.js"></script>
 <script src="data.js"></script>
 
@@ -7,7 +8,7 @@
   let path = window.location.pathname;
   let file = path.split("/").pop();
   let unit = file.split("_").shift();
-  
+
   loadIndex(unit, titles, footers);
 </script>
 

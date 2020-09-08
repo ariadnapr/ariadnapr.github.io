@@ -31,7 +31,7 @@ function loadPdf(unit, index, titles) {
     <a href="${unit}_index.html" class="link link-back">&lt; tornar a l'índex</a>
     <iframe src="pdf/${unit}/${unit}_${index}.pdf" style="width:1200px; height:800px; border:none;"></iframe>
   </body>`;
-  document.documentElement.innerHTML = content;
+  document.documentElement.innerHTML = content; 
 }
 
 function leadingZeros(num, length) {
