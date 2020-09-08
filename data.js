@@ -80,7 +80,6 @@ const titles = [
     "S09 Empresa i dona. Lideratge femení",
     "S09 Font. Lideratge femení i valors",
     "S09 Font. Dones i Consells Administració",
-    "S09 Font. Informe dones a Catalunya",
     "S09 Font extra. Dossier 8M 2019",
     "S09 Font extra. Llei 17/2015",
     "S10 Píndola formativa. I C PM",
