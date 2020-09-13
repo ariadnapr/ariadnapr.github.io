@@ -27,13 +27,9 @@ function loadPdf(unit, index, titles) {
     <title>${titles[parseInt(unit)][parseInt(index)]}</title>
   </head>
   <body class="column">
-    <div class="row">
-      <h1 class="header1 col-left">${titles[parseInt(unit)][parseInt(index)]}</h1>
-      <div class="col-right">
-        <a href="${unit}_index.html" class="link link-back col-right">&lt; tornar a l'índex</a>
-      </div>
-    </div>
-    <iframe src="pdf/${unit}/${unit}_${index}.pdf" style="width:100%; height:calc(100vh - 80px); border:none;"></iframe>
+    <h1 class="header1">${titles[parseInt(unit)][parseInt(index)]}</h1>
+    <a href="${unit}_index.html" class="link link-back">&lt; tornar a l'índex</a>
+    <iframe src="pdf/${unit}/${unit}_${index}.pdf" style="width:1200px; height:800px; border:none;"></iframe>
   </body>`;
   document.documentElement.innerHTML = content;
 }
